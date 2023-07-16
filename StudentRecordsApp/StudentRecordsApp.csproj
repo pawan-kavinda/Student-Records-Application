@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Background.jpg" />
+    <None Remove="Model\Images\10.png" />
+    <None Remove="Model\Images\3d-wallpaper-widescreen.jpg" />
+    <None Remove="Model\Images\5.png" />
+    <None Remove="Model\Images\6.png" />
+    <None Remove="Model\Images\6c6bb14fe54ac296a5cd43bd8b785e61.jpg" />
+    <None Remove="Model\Images\7.png" />
+    <None Remove="Model\Images\8.png" />
+    <None Remove="Model\Images\9.png" />
+    <None Remove="Model\Images\lasith.png" />
+    <None Remove="Model\Images\pawan.png" />
+    <None Remove="Model\Images\ramesh.png" />
+    <None Remove="Model\Images\snowing.png" />
+    <None Remove="Model\Images\sumudu.png" />
+    <None Remove="View\360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg" />
+    <None Remove="View\360_F_426527111_59QersN3ayDJ7Sfa5qwnKkp4l1O5tuAp.jpg" />
+    <None Remove="View\Background.jpg" />
+    <None Remove="View\illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" />
+    <None Remove="View\istockphoto-1294090117-612x612.jpg" />
+    <None Remove="View\loginn.jpg" />
+    <None Remove="View\new login.jpg" />
+    <None Remove="View\pngtree-beautiful-pink-purple-gradient-gradient-simple-image_11557.jpg" />
+    <None Remove="View\pngtree-glass-morphim-effect-registration-banner-with-gradient-blue-image_934693.jpg" />
+    <None Remove="View\pngtree-school-season-flowers-blackboard-student-image_13475.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Background.jpg" />
+    <Resource Include="Model\Images\pawan.png" />
+    <Resource Include="Model\Images\sumudu.png" />
+    <Resource Include="Model\Images\lasith.png" />
+    <Resource Include="Model\Images\ramesh.png" />
+    <Resource Include="View\Background.jpg" />
+    <Resource Include="View\illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" />
+    <Resource Include="View\pngtree-beautiful-pink-purple-gradient-gradient-simple-image_11557.jpg" />
+  </ItemGroup>
+
+</Project>

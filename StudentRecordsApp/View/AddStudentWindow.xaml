@@ -1,0 +1,95 @@
+﻿<Window x:Class="StudentRecordsApp.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentRecordsApp"
+        mc:Ignorable="d"
+        Title="{Binding Title,UpdateSourceTrigger=PropertyChanged}" Height="450" Width="800" WindowStyle="None">
+    <Window.DataContext>
+        <local:AddStudentVM/>
+    </Window.DataContext>
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/View/pngtree-beautiful-pink-purple-gradient-gradient-simple-image_11557.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Margin="5" TextAlignment="Center" Text="ADD NEW STUDENT" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Width="Auto" Grid.ColumnSpan="2">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF643131" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock Grid.Row="1" Text="First Name:" Margin="10"/>
+        <TextBlock Grid.Row="2" Text="Last Name:" Margin="10" />
+        <TextBlock Grid.Row="3" Text="Age:" Margin="10"/>
+        <TextBlock Grid.Row="4" Text="DateOfBirth:" Margin="10" />
+        <TextBlock Grid.Row="5" Text="GPA" Margin="10" />
+        <Button Grid.Row="6" Margin="10" VerticalAlignment="Center" Content="insert picture" Width="100" HorizontalAlignment="Left" Command="{Binding UploadPhotoCommand}" Background="#FFD2D3F6"  />
+
+        <Button Content="Save" Command="{Binding SaveCommand}" Margin="0 10" Grid.Row="8" HorizontalAlignment="Center" Grid.ColumnSpan="2" Width="200" 
+        BorderBrush="#FFAC7070"
+        BorderThickness="2"
+        Foreground="#FF280404"
+        FontSize="16"
+        FontWeight="Bold"
+        
+        >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFB366E0" Offset="0.888"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+
+
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="1" Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" Margin="5" >
+            <TextBox.Background>
+                <ImageBrush AlignmentX="Left" ImageSource="/View/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" Stretch="Uniform"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="2" Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Column="1">
+            <TextBox.Background>
+                <ImageBrush AlignmentX="Left" ImageSource="/View/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg" Stretch="Uniform"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox Grid.Row="3" Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Margin="5"  Grid.Column="1"/>
+        <TextBox  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="4" Text="{Binding Dateofbirth, UpdateSourceTrigger=PropertyChanged}" Margin="5"  Grid.Column="1"/>
+        <TextBox Grid.Row="5" Text="{Binding Gpa, UpdateSourceTrigger=PropertyChanged}" Margin="5"  Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
